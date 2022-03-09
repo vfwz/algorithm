@@ -4,7 +4,12 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-public class P34_FirstAndLastInArray {
+/**
+ * <a href="https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/">
+ * 题目链接
+ * </a>
+ */
+public class P34_FindFirstAndLastPositionOfElementInSortedArray {
 
     public int[] c_nums;
 
