@@ -22,10 +22,6 @@ public class TreeNode {
 
     @Override
     public String toString() {
-        return "TreeNode{\n" +
-                "val=" + val +
-                ", \nleft=" + left +
-                ", \nright=" + right +
-                '}';
+        return TreeNodeUtil.visualizeBinaryTree(this);
     }
 }
