@@ -30,6 +30,7 @@ public class LC88_MergeSortedArray {
      * 方法一：双指针
      * 思路：防止在归并的过程中nums1里的元素频繁的整体后移，
      * 可以将nums1中的元素先移动到数组右侧位置
+     * 思考：其实nums1不用整体右移动，从后向前倒序合并就好了...
      */
     class Solution {
         public void merge(int[] nums1, int m, int[] nums2, int n) {
