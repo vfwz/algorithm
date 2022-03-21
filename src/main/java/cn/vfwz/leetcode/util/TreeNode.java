@@ -15,7 +15,10 @@ public class TreeNode {
      * @param input 形如 [1,2,3,null,null,4] 的输入，同leetcode形式
      */
     public TreeNode(String input) {
-        String[] split = input.substring(1, input.length() - 1).split(",");
+        if(input.startsWith("[") && input.endsWith("]")) {
+            input = input.substring(1, input.length() - 1);
+        }
+        String[] split = input.split(",");
         Integer[] ints = new Integer[split.length];
         for (int i = 0; i < split.length; i++) {
             ints[i] = "null".equals(split[i]) ? null : Integer.parseInt(split[i]);
