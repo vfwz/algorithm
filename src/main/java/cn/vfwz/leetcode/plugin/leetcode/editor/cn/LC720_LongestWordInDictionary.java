@@ -18,11 +18,11 @@ public class LC720_LongestWordInDictionary {
 
     @Test
     public void testSolution() {
-        Solution1 solution = new Solution1();
+        Solution solution = new Solution();
         // 期望结果:"lemdqgqwumegvfexckxgiadwlc" 这个案例用本地电脑跑DFS用时94.255s
         String[] input = {"sqmhtpcg", "hzzpjoossvzgyg", "sqmhtpcgdsdfqgxsjgqizl", "ncghfsccrgqkafh", "sq", "uiuwyorgmesm", "xtwmnu", "ix", "japawosnoiobnrfjrsbr", "bqwkb", "japawosnoio", "xtwmnup", "hzzpjoossvzgygxhgs", "wve", "yizslwlpn", "ixl", "sqmhtp", "as", "zfzpuxghsfme", "kcudnbvfu", "e", "momqxn", "ixlfvbvdzwndvfi", "uwp", "yizslwlp", "ixlfvbvdzwnd", "qdowgpmd", "japawosnoiob", "qdowgpmdjcowemk", "yizslwlpndzjih", "qdowgpmdjc", "ovly", "tpktncgau", "tpktncgausglcelnpn", "ixlfvbv", "kcudnbvfugbntkdgjs", "uiuwyorgme", "c", "xtwmnupebcuzb", "sqmhtpcgdsdfqgxsjgqi", "ixlfvbvdzwn", "japawosnoiobnrfjrsbrc", "d", "sqmhtpcgdsdfqgxs", "uiuwyorgmesml", "vg", "xtwmnupebcuz", "uiuwy", "xtwmnupe", "hzzpjoossvzgygxhgsiy", "ixlfv", "uiuwyorg", "yizslwlpnd", "qdowgpmdj", "lemdqgqwumegvfe", "r", "sqmhtpcgds", "ncghfsccrgqka", "kcudnbvfugb", "asglpcpgctpdcehw", "tpkt", "momqxnl", "x", "ncghfs", "asglp", "hzzpjo", "tp", "zfzpu", "momq", "yizslwlpndzjihonf", "uw", "erk", "fu", "ahx", "uiuwyo", "fukwsv", "ncghf", "ah", "gslbknctqw", "wvep", "a", "p", "qdowgpmdjcowemkacwzox", "zfzp", "ahxm", "pgd", "yizslwlpndzjihonftl", "kc", "xtwmn", "xtwmnupebcuzbgn", "lemdqg", "k", "yizslwlpndzjihon", "hzz", "hzzpjoossvzgygxhgsiyduo", "ct", "xtwm", "m", "lemdqgqwumegvf", "u", "o", "l", "erkufy", "ncgh", "lemdqgqwumegvfexckxgiadwlc", "erkufypwnuh", "tpktnc", "tpktncgaus", "er", "ncghfsccrgqk", "ixlfvbvdzwndvf", "q", "zfzpuxgh", "sqmhtpc", "yizslwl", "uiuwyorgm", "mo", "ixlfvbvd", "ctguxtac", "bqw", "zfzpux", "kcudnbvfugbntkdgjst", "japawosnoiobnrfjrsb", "kcudnbvf", "qdow", "uiuwyor", "gs", "bqwk", "lemdqgqwumegvfexckx", "yizslwlpndzjiho", "hzzpj", "gslbknctqwk", "hzzpjoossvzgygxh", "sqmhtpcgdsdfqgx", "tpktncga", "xtwmnupebcuzbg", "erkufypwnu", "japawos", "ncghfsccr", "ctgu", "tpk", "tpktncgausglceln", "zfzpuxghsfmeq", "xt", "tpktncgausglce", "kcudnb", "kcudnbvfugbn", "zf", "qdowgpmdjcowemka", "ixlf", "ixlfvb", "qdowgpmdjcowemkacw", "tpktncgausglcel", "yiz", "asglpcpgctpd", "yizslwlpndz", "ctgux", "lemdqgq", "qdowg", "pg", "asg", "f", "ovl", "japawo", "sqmhtpcgdsdfqgxsjg", "t", "sqmhtpcgdsdfqgxsj", "gslbk", "hzzpjoossvzgy", "qd", "kcudnbv", "asglpcpgctpdcehwte", "gslbknct", "sqmhtpcgdsd", "zfzpuxghsf", "y", "kcudnbvfugbntkdgjstx", "z", "gslbknctq", "hzzpjoo", "sqmhtpcgdsdfqgxsjgq", "bqwkbp", "v", "japaw", "yizslwlpndzjihonftlel", "le", "ixlfvbvdzw", "qdowgpmdjcowemkacwzoxuk", "aq", "japawosnoiobnrf", "yizslwlpndzjihonftle", "ncghfsccrgqkafho", "gslbkn", "kcud", "xtwmnupeb", "ctguxta", "erku", "qdo", "japawosnoiobn", "tpktncgausglcelnpno", "ncghfsccrgq", "erkufypwnuhd", "kcudnbvfugbntkdgj", "ixlfvbvdzwndv", "ixlfvbvdz", "erkuf", "momqx", "ui", "asglpcpgct", "ja", "lem", "japawosnoiobnr", "vgirdgjs", "kcudnbvfugbntkd", "kcudnbvfugbntk", "asglpcp", "sqmhtpcgdsdfqgxsjgqiz", "ncghfscc", "xtw", "rj", "qdowgpmdjcowemkac", "kcudnbvfug", "fuk", "tpktncgausglc", "yizslwlpndzjihonft", "gsl", "hzzpjoos", "lemdqgqwumegvfexckxgiadwl", "ctg", "h", "hzzpjoossvzgygxhgsi", "w", "yizsl", "qv", "uiu", "hzzpjoossvzgygx", "zfzpuxg", "lemdqgqwumegvfex", "lemdqgqwu", "dd", "yizslw", "kcu", "qdowgpmdjcowem", "qdowgpmdjcowemkacwzoxu", "vgir", "asglpcpgctpdceh", "hzzpjoossvzgygxhgsiyduod", "yizslwlpndzji", "wvepj", "fukws", "hzzpjoossvzgygxhgsiyd", "b", "momqxnldh", "kcudnbvfugbntkdg", "qdowgpmdjcowe", "asglpcpgc", "lemdqgqw", "lemdqgqwumeg", "erkufypwn", "qdowgpmdjcow", "zfzpuxghsfmeqb", "sqmhtpcgdsdf", "ncg", "gslbknc", "lemdq", "tpktncgausg", "ncghfsc", "vgirdg", "lemdqgqwume", "qdowgpmdjcowemkacwzo", "qdowgpmdjcowemkacwz", "tpktncgausglcelnp", "sqmht", "lemdqgqwumegv", "ncghfsccrgqkaf", "japawosnoi", "fukw", "rju", "hzzpjoossvzgygxhgsiyduodp", "g", "japawosnoiobnrfj", "zfz", "aqfmw", "kcudnbvfugbnt", "zfzpuxghs", "s", "nc", "lemdqgqwumegvfexckxg", "xtwmnupebcu", "tpktncg", "vgirdgj", "hzzpjooss", "ncghfsccrgqkafhoa", "lemdqgqwumegvfexckxgiadw", "mom", "ov", "ctguxt", "japawosno", "japawosnoiobnrfjrs", "lemdqgqwumegvfexckxgia", "gslb", "tpktn", "asglpcpgctpdcehwt", "japawosnoiobnrfjr", "xtwmnupebc", "lemd", "sqmhtpcgdsdfq", "bq", "sqmh", "tpktncgausgl", "uiuwyorgmes", "yizslwlpndzj", "yizs", "qdowgpm", "qdowgpmdjcowemkacwzoxukg", "hz", "bqwkbpq", "zfzpuxghsfm", "asglpc", "ncghfsccrg", "momqxnld", "lemdqgqwumegvfexckxgi", "japawosnoiobnrfjrsbrcu", "qdowgpmdjco", "lemdqgqwumegvfexckxgiad", "ixlfvbvdzwndvfir", "aqf", "asglpcpgctpdc", "j", "erkufypw", "vgird", "asglpcpgctp", "hzzpjoossvzgygxhgsiydu", "kcudn", "wv", "lemdqgqwum", "hzzpjoossv", "vgirdgjszo", "sqmhtpcgd", "sqm", "vgirdgjsz", "sqmhtpcgdsdfqg", "asglpcpgctpdce", "yi", "jap", "lemdqgqwumegvfexc", "uiuw", "asgl", "hzzp", "lemdqgqwumegvfexck", "japawosnoiobnrfjrsbrcuz", "asglpcpg", "hzzpjoossvzgygxhg", "i", "n", "qdowgp", "vgi", "hzzpjoossvz", "japawosn", "japa", "hzzpjoossvzg", "erkufyp"};
-//        String[] input = {"yo", "ew", "fc", "zrc", "yodn", "fcm", "qm", "qmo", "fcmz", "z", "ewq", "yod", "ewqz", "y"};
-//        String[] input = {"rac", "rs", "ra", "on", "r", "otif", "o", "onpdu", "rsf", "rs", "ot", "oti", "racy", "onpd"};
+        //        String[] input = {"yo", "ew", "fc", "zrc", "yodn", "fcm", "qm", "qmo", "fcmz", "z", "ewq", "yod", "ewqz", "y"};
+        //        String[] input = {"rac", "rs", "ra", "on", "r", "otif", "o", "onpdu", "rsf", "rs", "ot", "oti", "racy", "onpd"};
 
         Arrays.sort(input, String::compareTo);
 
@@ -38,21 +38,46 @@ public class LC720_LongestWordInDictionary {
     //leetcode submit region begin(Prohibit modification and deletion)
 
     /**
-     * 方法二：排序 + Hash表保存前缀
+     * 方法三：前缀树
      */
     class Solution {
+
+        class TrieNode {
+            boolean isEnd = false;
+            TrieNode[] children = new TrieNode[26];
+
+            /**
+             * 当单词前缀存在时才插入单词
+             */
+            public boolean insertIfHasPrefix(String word) {
+                TrieNode node = this;
+                for (int i = 0; i < word.length(); i++) {
+                    int ch = word.charAt(i) - 'a';
+                    if (node.children[ch] == null) {
+                        if (i < word.length() - 1) { // 前缀不存在
+                            return false;
+                        } else { // 前缀存在，但是最后一个字符还没创建节点
+                            node.children[ch] = new TrieNode();
+                        }
+                    }
+                    node = node.children[ch];
+                }
+                return true;
+            }
+        }
+
         public String longestWord(String[] words) {
+            TrieNode trie = new TrieNode();
             String longestWord = "";
             // 按照字母长度从小到大排序
-            Arrays.sort(words, String::compareTo);
-            // Hash表保存合法的单词, 可以换做HashSet, 不过HashSet的底层也是HashMap也是一样的
-            HashMap<String, String> prefixMap = new HashMap<>();
+            Arrays.sort(words, Comparator.comparingInt(String::length));
+
             for (String word : words) {
-                if (word.length() == 1 || prefixMap.containsKey(word.substring(0, word.length() - 1))) {
-                    // prefix进行保存
-                    prefixMap.put(word, word);
-                    // 相同前缀，长度大的才会替换，也就是前缀相同，长度相同的单词，字典序后面的不会替换前面的
+                if (trie.insertIfHasPrefix(word)) {
                     if (word.length() > longestWord.length()) {
+                        longestWord = word;
+                    } else if (word.length() == longestWord.length()
+                            && word.compareTo(longestWord) < 0) {
                         longestWord = word;
                     }
                 }
@@ -100,6 +125,31 @@ public class LC720_LongestWordInDictionary {
             }
         }
 
+    }
+
+
+    /**
+     * 方法二：排序 + Hash表保存前缀
+     */
+    class Solution2 {
+        public String longestWord(String[] words) {
+            String longestWord = "";
+            // 按照字母长度从小到大排序
+            Arrays.sort(words, String::compareTo);
+            // Hash表保存合法的单词, 可以换做HashSet, 不过HashSet的底层也是HashMap也是一样的
+            HashMap<String, String> prefixMap = new HashMap<>();
+            for (String word : words) {
+                if (word.length() == 1 || prefixMap.containsKey(word.substring(0, word.length() - 1))) {
+                    // prefix进行保存
+                    prefixMap.put(word, word);
+                    // 相同前缀，长度大的才会替换，也就是前缀相同，长度相同的单词，字典序后面的不会替换前面的
+                    if (word.length() > longestWord.length()) {
+                        longestWord = word;
+                    }
+                }
+            }
+            return longestWord;
+        }
     }
 
 }
